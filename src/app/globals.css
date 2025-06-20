@@ -1,15 +1,24 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --color-pry: #cc6518;
+  --color-secondary: #6598c3;
+  --color-sec: #2e3443;
+  --color-light: #fafafa;
+  --color-button: #994c12;
+
+  --font-poppins: 'Poppins', sans-serif;
+  --font-jakarta: 'Plus_Jakarta_Sans', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+  --font-roboto-mono: 'Roboto Mono', monospace;
+  --font-jetbrains: 'JetBrains_Mono', monospace;
+  --font-inter: 'Inter', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +29,28 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-poppins);
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.shape {
+  /* clip-path: path('M 0,100 A L 50,0 L 100,100 Z'); */
+  /* clip-path: path('M 0,100 A L 50,0 L 100,100 Z'); */
+  /* Creates a semicircle at the bottom */
+  /* clip-path: path('M 0,50 A 50,80 0 0 1 100,50 L 100,100 L 0,100 Z'); */
+
+  clip-path: path('M 0,100 A 50,50 0 0 1 100,50');
+}
+
+.prose {
+  line-height: 1.6;
+}
+.prose img {
+  margin: 1.5em 0;
 }
