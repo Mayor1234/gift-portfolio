@@ -17,7 +17,7 @@ export default function FooterSection() {
             </h3>
             <p className="mt-4 text-sm text-gray-400">
               Elevating interiors through timeless, functional, and elegant
-              design. Let's make your space unforgettable.
+              design. Let us make your space unforgettable.
             </p>
           </div>
 

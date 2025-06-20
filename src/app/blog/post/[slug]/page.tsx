@@ -2,20 +2,20 @@ import PortableTexComponent from '@/components/PortableText';
 import SanityImage from '@/components/SanityImage';
 import { client } from '@/sanity/lib/client';
 import { groq } from 'next-sanity';
+import { type Metadata } from 'next';
 
-type Props = {
-  params: {
-    slug: string;
-  };
-};
-
-type MetaProps = {
-  params: { slug: string };
-  //   searchParams: { [key: string]: string | string[] | undefined };
-};
+// interface PostPageProps {
+//   params: { slug: string };
+//   searchParams?: { [key: string]: string | string[] | undefined };
+// }
 
 export const revalidate = 60;
-export async function generateMetadata({ params: { slug } }: MetaProps) {
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const { slug } = params;
   try {
     const query = groq`
       *[_type=='post' && slug.current == $slug][0]{
@@ -34,7 +34,7 @@ export async function generateMetadata({ params: { slug } }: MetaProps) {
     }
     return {
       title: post.title,
-      descriotion: post.description,
+      description: post.description,
     };
   } catch {
     return {
@@ -61,23 +61,23 @@ export async function generateStaticParams() {
   }));
 }
 
-const PostDetail = async ({ params: { slug } }: Props) => {
+const PostDetail = async ({ params }: { params: { slug: string } }) => {
+  const { slug } = params;
+
   const query = groq`
     *[_type=='post' && slug.current == $slug][0]{
         ...,
         author->{image, name},
         categories[]->,
-        // body  
+
     }
     `;
   const post = await client.fetch(query, { slug });
 
-  //   // Access params directly without destructuring
-  //   const post = await getPostBySlug(params.slug);
-
   if (!post) {
     return <div className="py-20 text-center">Post not found</div>;
   }
+
   console.log(post);
   return (
     <section className="max-w-6xl mx-auto my-10 flex flex-col lg:flex-row">

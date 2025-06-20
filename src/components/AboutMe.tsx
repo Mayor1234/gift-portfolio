@@ -26,9 +26,18 @@ const AboutMe = () => {
             </div>
             <div>
               <p className="text-4xl font-medium font-inter">
+                100
+                <span className="text-2xl font-medium">+</span>
+              </p>
+              <p className="font-poppins text-gray-700 mb-6">
+                Price comparison
+              </p>
+            </div>
+            <div>
+              <p className="text-4xl font-medium font-inter">
                 <span className="text-2xl font-medium">+</span>65%
               </p>
-              <p className="font-poppins text-gray-700 mb-6">client revenue.</p>
+              <p className="font-poppins text-gray-700 mb-6">Client revenue.</p>
             </div>
           </div>
         </div>
