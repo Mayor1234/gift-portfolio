@@ -132,7 +132,6 @@ export default function PortableTexComponent({
 }: {
   value: PortableTextBlock[];
 }) {
-  console.log(value);
   return (
     <div>
       <PortableText value={value} components={components} />

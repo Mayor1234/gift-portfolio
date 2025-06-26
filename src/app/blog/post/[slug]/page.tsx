@@ -4,18 +4,15 @@ import { client } from '@/sanity/lib/client';
 import { groq } from 'next-sanity';
 import { type Metadata } from 'next';
 
-// interface PostPageProps {
-//   params: { slug: string };
-//   searchParams?: { [key: string]: string | string[] | undefined };
-// }
-
 export const revalidate = 60;
+
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = params;
+  const { slug } = await params;
+
   try {
     const query = groq`
       *[_type=='post' && slug.current == $slug][0]{
@@ -61,8 +58,12 @@ export async function generateStaticParams() {
   }));
 }
 
-const PostDetail = async ({ params }: { params: { slug: string } }) => {
-  const { slug } = params;
+const PostDetail = async ({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) => {
+  const { slug } = await params;
 
   const query = groq`
     *[_type=='post' && slug.current == $slug][0]{
@@ -78,7 +79,6 @@ const PostDetail = async ({ params }: { params: { slug: string } }) => {
     return <div className="py-20 text-center">Post not found</div>;
   }
 
-  console.log(post);
   return (
     <section className="max-w-6xl mx-auto my-10 flex flex-col lg:flex-row">
       <article className="max-w-3xl px-5 h-full lg:flex-[3]">
@@ -90,7 +90,7 @@ const PostDetail = async ({ params }: { params: { slug: string } }) => {
           <div className="flex text-sm font-light text-gray-600 uppercase pb-3">
             <p className="pr-2">by {post.author.name}</p>
             <span className='before:content-["\a·\a"]'>
-              {new Date(post?._createdAt).toLocaleDateString('en-US', {
+              {new Date(post._createdAt).toLocaleDateString('en-US', {
                 day: 'numeric',
                 month: 'long',
                 year: 'numeric',

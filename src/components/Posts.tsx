@@ -38,7 +38,7 @@ const Posts = async () => {
   return (
     <section className="max-w-6xl mx-auto my-20 px-5 md:px-0">
       <div className="grid grid-cols-1 gap-10 md:gap-5 md:grid-cols-2 lg:grid-cols-3 w-full h-full">
-        {posts?.map((post, index) => (
+        {posts.map((post, index) => (
           <div key={index} className="group">
             <Link href={`blog/post/${post.slug.current}`}>
               <div>

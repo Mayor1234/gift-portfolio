@@ -93,16 +93,6 @@ export async function getPostsByCategory(category: string) {
 }
 
 export async function getRecentPosts() {
-  //   const query = groq`{
-  //   "posts": *[_type=='post'] | order(publishedAt desc)[0...3]{
-  //   ...,
-  //   author->{name},
-  //   categories[]->,
-  // },
-
-  //   "total": count(*[_type=='post'])
-  // }`;
-
   const query = groq`*[_type=='post'] | order(publishedAt desc)[0...3] {
   ...,
   author->{image, name},
