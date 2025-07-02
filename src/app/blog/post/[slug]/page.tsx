@@ -107,7 +107,7 @@ const PostDetail = async ({
               priority
             />
           )}
-          <p className="text-gray-600 text-sm mb-4">
+          <p className="text-gray-600 text-sm mb-4 flex flex-wrap  gap-2 w-full">
             {post.categories.map((category: { _id: string; title: string }) => (
               <span
                 key={category._id}

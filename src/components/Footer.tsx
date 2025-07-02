@@ -11,11 +11,11 @@ export default function FooterSection() {
       <div className="max-w-6xl mx-auto">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Logo & Description */}
-          <div className="">
+          <div>
             <h3 className="text-2xl font-semibold font-jakarta text-[#e68c47]">
               Gift
             </h3>
-            <p className="mt-4 text-sm text-gray-400">
+            <p className="mt-3 text-base text-gray-300">
               Elevating interiors through timeless, functional, and elegant
               design. Let us make your space unforgettable.
             </p>

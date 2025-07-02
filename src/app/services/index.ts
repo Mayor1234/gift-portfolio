@@ -10,7 +10,7 @@ export async function getPost() {
     ...,
     author->{image, name},
     categories[]->,
-  } | order(_createdAt desc)[0...4] 
+  } | order(_createdAt desc)[0...3] 
   `;
   const data = await client.fetch(query);
   return data;
@@ -59,7 +59,7 @@ export async function getAllPosts() {
     ...,
     author->{image, name},
     categories[]->,
-  } | order(_createdAt desc)`;
+  } | order(publishedAt desc)`;
   const data = await client.fetch(query);
   return data;
 }
@@ -87,7 +87,7 @@ export async function getPostsByCategory(category: string) {
     ...,
     author->{image, name},
     categories[]->,
-  } | order(_createdAt desc)`;
+  } | order(publishedAt desc)`;
   const data = await client.fetch(query, { category });
   return data;
 }
@@ -97,7 +97,50 @@ export async function getRecentPosts() {
   ...,
   author->{image, name},
   categories[]->,
-} | order(_createdAt desc)`;
+} | order(publishedAt desc)`;
   const data = await client.fetch(query);
+  return data;
+}
+
+// Projects Query
+
+// get all projects
+export async function getAllProjects() {
+  /**
+   * Fetches all posts from Sanity.
+   * @returns {Promise<Array>} An array of all posts.
+   */
+  const query = groq`*[_type=='project']{
+    ...,
+    categories[]->,
+  } | order(publishedAt desc)`;
+  const data = await client.fetch(query);
+  return data;
+}
+
+// get single project
+export async function getHomeProjects() {
+  /**
+   * Fetches all posts from Sanity.
+   * @returns {Promise<Array>} An array of posts.
+   */
+  const query = groq`*[_type=='project']{
+    ...,
+    categories[]->,
+  } | order(_createdAt desc)[0...3] 
+  `;
+  const data = await client.fetch(query);
+  return data;
+}
+
+export async function getProjectBySlug(slug: string) {
+  const query = groq`*[_type == "project" && slug.current == $slug][0]{
+    ...,
+    categories[]->,
+    publishedAt,
+
+  }`;
+
+  const data = await client.fetch(query, { slug });
   return data;
 }
