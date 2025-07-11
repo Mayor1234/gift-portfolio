@@ -127,8 +127,7 @@ export async function getHomeProjects() {
   const query = groq`*[_type=='project']{
     ...,
     categories[]->,
-  } | order(_createdAt desc)[0...3] 
-  `;
+  } | order(publishedAt desc)`;
   const data = await client.fetch(query);
   return data;
 }

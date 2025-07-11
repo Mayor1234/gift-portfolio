@@ -16,8 +16,10 @@ interface ProjectType {
 
 const ProjectSection = async () => {
   const projects: ProjectType[] = await getHomeProjects();
+
   if (!projects) return <div>Project not found</div>;
 
+  console.log(projects);
   return (
     <div className="max-w-6xl mx-auto px-5 md:px-0">
       <div>
@@ -49,18 +51,20 @@ const ProjectSection = async () => {
                   <h3 className="text-lg text-gray-800 font-semibold mb-2">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-4 flex flex-wrap  gap-2 w-full">
-                    {project.categories.map(
-                      (category: { _id: string; title: string }) => (
-                        <span
-                          key={category._id}
-                          className="bg-pry text-light tracking-wide px-2 py-1 rounded-full mr-2 font-inter font-medium shadow-md"
-                        >
-                          {category.title}
-                        </span>
-                      )
-                    )}
-                  </p>
+                  {project.categories && (
+                    <p className="text-gray-600 text-sm mb-4 flex flex-wrap  gap-2 w-full">
+                      {project.categories.map(
+                        (category: { _id: string; title: string }, i) => (
+                          <span
+                            key={i}
+                            className="bg-pry text-light tracking-wide px-2 py-1 rounded-full mr-2 font-inter font-medium shadow-md"
+                          >
+                            {category && category.title}
+                          </span>
+                        )
+                      )}
+                    </p>
+                  )}
                 </div>
               </Link>
             </div>

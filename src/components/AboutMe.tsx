@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const AboutMe = () => {
   return (
     <div className="max-w-6xl mx-auto py-10 px-6 md:px-0">
@@ -14,6 +16,14 @@ const AboutMe = () => {
             interior designs for modern, contemporary and minimalist residential
             and commercial spaces.
           </p>
+          <Link href={'/about'}>
+            <button
+              type="button"
+              className="bg-pry text-[#fff] px-5 py-2 rounded-full font-jakarta font-medium cursor-pointer"
+            >
+              Read more...
+            </button>
+          </Link>
           <div className="flex justify-between mt-10">
             <div>
               <p className="text-4xl font-medium font-inter">

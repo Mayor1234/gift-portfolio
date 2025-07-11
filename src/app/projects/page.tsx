@@ -15,6 +15,11 @@ interface ProjectType {
   gallery: { asset: { _ref: string; _type: 'reference' }; alt: string }[];
 }
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 60;
+export const fetchCache = 'force-no-store';
+export const preferredRegion = 'auto';
+
 const page = async () => {
   const projects: ProjectType[] = await getAllProjects();
   if (!projects) {
@@ -51,7 +56,7 @@ const page = async () => {
                 </p>
                 {project.categories?.length > 0 && (
                   <div className="flex flex-wrap gap-2">
-                    {project.categories.map((cat, i: number) => (
+                    {project.categories.map((cat, i) => (
                       <span
                         key={i}
                         className="text-xs bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full"

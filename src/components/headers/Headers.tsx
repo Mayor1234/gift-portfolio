@@ -20,11 +20,11 @@ const Header = () => {
       <div className="max-w-6xl mx-auto flex items-center justify-between gap-10 px-5 py-8 h-full w-full lg:px-0">
         <Logo />
         <NavMenu />
-        <div className="w-fit flex items-center justify-center md:justify-end">
+        {/* <div className="w-fit flex items-center justify-center md:justify-end">
           <button className="bg-white text-[#994C12] font-semibold text-xs px-[6px] py-[6px] md:text-[16.26px] md:px-[27.1px] md:py-[12.2px] w-fit rounded-full font-poppins border border-button shadow hover:bg-[#fff2e6] transition-all duration-300 ease-in-out cursor-pointer">
             +234 90032250674
           </button>
-        </div>
+        </div> */}
         <div className="flex items-center justify-center flex-col lg:hidden">
           <button
             onClick={() => setModalOpen()}
