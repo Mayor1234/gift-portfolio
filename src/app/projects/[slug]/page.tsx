@@ -82,14 +82,14 @@ const ProjectDetailPage = async ({
           <h1 className="text-4xl font-bold text-gray-800 mb-2">
             {project.title}
           </h1>
-          {project.categories.length > 0 && (
+          {project.categories && (
             <div className="flex flex-wrap gap-2 mb-4">
               {project.categories.map((category, index: number) => (
                 <span
                   key={index}
                   className="inline-block bg-gray-200 text-sm text-gray-700 px-3 py-1 rounded-full"
                 >
-                  {category.title}
+                  {category && category.title}
                 </span>
               ))}
             </div>

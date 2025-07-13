@@ -1,8 +1,9 @@
 import AboutMe from '@/components/AboutMe';
 import HeroSection from '@/components/headers/HeroSection';
 import ProjectSection from '@/components/projects/Projects';
-
 import RecentPosts from '@/components/RecentPosts';
+
+export const revalidate = 60;
 
 export default function Home() {
   return (
