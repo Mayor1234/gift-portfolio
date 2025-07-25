@@ -1,6 +1,6 @@
 const HeroSection = () => {
   return (
-    <section className="relative z-20 flex flex-col items-center justify-center bg-gradient-to-b from-sec via-sec to-secondary text-gray-700 min-h-[75vh] px-6 md:px-0">
+    <section className="relative z-20 flex flex-col items-center justify-center bg-gradient-to-b from-sec via-sec to-secondary text-gray-700 min-h-[60vh] md:min-h-[75vh] px-6 md:px-0">
       {/* Grid Overlay */}
       <div className="absolute -z-20 inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_2px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_2px,transparent_1px)] bg-[size:110px_110px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
 
@@ -16,7 +16,7 @@ const HeroSection = () => {
             Lifestyles
           </h1>
           <div className="mt-8">
-            <button className="bg-[#fff2e6] text-[#994C12] text-lg font-semibold font-jakarta border border-button px-3 py-2 rounded-full shadow hover:bg-[#f7e0c9] transition-all duration-300 ease-linear cursor-pointer md:py-2.5 md:px-5 md:text-xl">
+            <button className="bg-[#fff2e6] text-[#994C12] text-lg font-semibold font-jakarta border border-button px-5 py-2 rounded-full shadow hover:bg-[#f7e0c9] transition-all duration-300 ease-linear cursor-pointer md:py-2.5 md:px-8 md:text-xl">
               Contact Me
             </button>
           </div>

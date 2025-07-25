@@ -69,9 +69,9 @@ const HomeAboutSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content Section */}
           <div className="space-y-6 flex-1">
-            <h2 className="text-gray-900 text-xl md:text-3xl font-semibold font-jakarta mb-6">
-              Crafting aesthetically pleasing{' '}
-              <span className="text-pry">and functional</span> spaces
+            <h2 className="text-gray-900 text-xl md:text-3xl font-semibold font-jakarta mb-6 capitalize">
+              Crafting <span className="text-pry">aesthetically</span> pleasing
+              and functional spaces
             </h2>
 
             <p className="text-lg text-gray-600 leading-relaxed">
@@ -161,18 +161,16 @@ const HomeAboutSection = () => {
               />
             </div>
           </div> */}
-          <div className="md:col-span-1 flex justify-center">
+          <div className="md:col-span-1 flex justify-center h-full">
             <div className="relative w-64 h-64 md:w-80 md:h-96 rounded-full overflow-hidden border-4 border-white shadow-xl">
-              <div className="absolute inset-0 bg-indigo-100 flex items-center justify-center">
-                <span className="text-4xl text-pry font-bold">
-                  <Image
-                    src={'/images/gift_pic.png'}
-                    alt="about image"
-                    width={200}
-                    height={200}
-                    className="h-60 md:h-full w-full object-cover object-center"
-                  />
-                </span>
+              <div className="absolute inset-0 bg-indigo-100 flex items-center justify-center h-full">
+                <Image
+                  src={'/images/gift_pic.png'}
+                  alt="about image"
+                  width={200}
+                  height={200}
+                  className="h-full w-full object-cover object-top"
+                />
               </div>
             </div>
           </div>

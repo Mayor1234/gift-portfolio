@@ -17,15 +17,13 @@ const AboutPage: React.FC = () => {
           <div className="md:col-span-1 flex justify-center">
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
               <div className="absolute inset-0 bg-indigo-100 flex items-center justify-center">
-                <span className="text-4xl text-pry font-bold">
-                  <Image
-                    src={'/images/gift_pic.png'}
-                    alt="about image"
-                    width={200}
-                    height={200}
-                    className="h-60 md:h-full w-full object-cover object-center"
-                  />
-                </span>
+                <Image
+                  src={'/images/gift_pic.png'}
+                  alt="about image"
+                  width={200}
+                  height={200}
+                  className="h-full w-full object-cover object-top"
+                />
               </div>
             </div>
           </div>
