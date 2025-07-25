@@ -3,7 +3,7 @@ import { navMenuItems } from '../../constants';
 
 const Menu = () => {
   return (
-    <nav className="hidden font-popppins font-normal leading-[26.97px] text-[22px] text-light md:w-[60%] lg:flex items-center justify-center gap-8 w-full h-full">
+    <nav className="hidden font-popppins font-normal leading-[26.97px] text-[22px] text-light  lg:flex items-center justify-center gap-8  h-full">
       {navMenuItems.map((menu, i) => (
         <Link href={`${menu.url}`} key={i}>
           <li

@@ -118,13 +118,13 @@ export async function getAllProjects() {
   return data;
 }
 
-// get single project
+// Get Home Projects
 export async function getHomeProjects() {
   /**
    * Fetches all posts from Sanity.
    * @returns {Promise<Array>} An array of posts.
    */
-  const query = groq`*[_type=='project']{
+  const query = groq`*[_type=='project'] | order(publishedAt desc)[0...3] {
     ...,
     categories[]->,
   } | order(publishedAt desc)`;

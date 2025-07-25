@@ -1,6 +1,6 @@
 'use client';
 
-import { MdOutlineKeyboardBackspace } from 'react-icons/md';
+import { MdArrowBack } from 'react-icons/md';
 import { useRouter } from 'next/navigation';
 
 const BackButtion = () => {
@@ -10,10 +10,11 @@ const BackButtion = () => {
       <div className="mb-6">
         <button
           type="button"
-          className="text-sm flex items-center gap-2 text-pry font-poppins cursor-pointer transition-all duration-300 ease-linear hover:text-pry/70"
+          className="text-sm flex items-center gap-2 text-pry font-poppins cursor-pointer transition-all duration-300 ease-linear hover:opacity-70"
           onClick={() => router.back()}
         >
-          <MdOutlineKeyboardBackspace /> Back
+          <MdArrowBack size={20} />
+          Back
         </button>
       </div>
     </div>
