@@ -310,7 +310,7 @@ const HeroSection = () => {
           {/* Badge */}
           <div className="relative mb-6">
             <div className="absolute -inset-1 bg-gradient-to-r from-sec to-secondary rounded-full blur opacity-30 animate-pulse" />
-            <p className="relative text-sm md:text-lg font-jakarta leading-tight mb-4 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent border border-white/20 backdrop-blur-sm w-fit px-6 py-3 rounded-full shadow-lg hover:shadow-purple-500/25 transition-all duration-300 cursor-default">
+            <p className="relative text-sm md:text-lg font-jakarta leading-tight mb-4 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent border border-white/20 backdrop-blur-sm w-fit px-6 py-3 rounded-full shadow-lg hover:shadow-secondary/25 transition-all duration-300 cursor-default">
               ✨ Interior Designer
             </p>
           </div>
@@ -324,11 +324,19 @@ const HeroSection = () => {
             }`}
           >
             <span className="bg-gradient-to-r from-[#fff] via-[#f6f7f8] to-[#f3f4f5] bg-clip-text text-transparent animate-pulse">
-              I Help Breathe Life
+              I Help{' '}
+              <span className="bg-gradient-to-r from-pry via-[#fff] to-pry bg-clip-text text-transparent">
+                Breathe {''}
+              </span>
+              Life
             </span>
             <br className="hidden md:block" />
-            <span className="bg-gradient-to-r from-pry via-[#fff] to-pry bg-clip-text text-transparent">
-              Into Spaces, By Elevating
+            <span>
+              Into{' '}
+              <span className="bg-gradient-to-r from-pry via-[#fff] to-pry bg-clip-text text-transparent">
+                Spaces
+              </span>
+              , By Elevating
             </span>
             <br className="hidden md:block" />
             <span className="bg-gradient-to-r from-[#fff] via-[#fff] to-[#f6f7f8] bg-clip-text text-transparent">
