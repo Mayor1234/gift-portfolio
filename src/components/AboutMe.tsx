@@ -1,65 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-// const AboutMe = () => {
-//   return (
-//     <div className="max-w-6xl mx-auto py-10 px-6 md:px-0">
-//       <h2 className="uppercase text-pry text-lg md:text-xl font-semibold font-jakarta mb-6">
-//         About me
-//       </h2>
-//       <div className="flex justify-between w-full">
-//         <div className="w-full md:w-1/2 font-jakarta">
-//           <p className="text-xl md:text-3xl font-semibold font-jakarta mb-6">
-//             Crafting aesthetically pleasing and functional spaces
-//           </p>
-//           <p className="font-poppins text-gray-600 mb-6">
-//             I help clients and design teams bring their ideas to life, through
-//             thoughtful interior design and high-quality 3D visualization. I’m
-//             open to remote freelance projects as well as full time design and
-//             visualization roles.
-//           </p>
-//           <Link href={'/about'}>
-//             <button
-//               type="button"
-//               className="bg-pry text-[#fff] px-5 py-2 rounded-full font-jakarta font-medium cursor-pointer"
-//             >
-//               Read more...
-//             </button>
-//           </Link>
-//           <div className="flex justify-between mt-10">
-//             <div>
-//               <p className="text-4xl font-medium font-inter">
-//                 80
-//                 <span className="text-2xl font-medium">+</span>
-//               </p>
-//               <p className="font-poppins text-gray-700 mb-6">
-//                 Successful projects.
-//               </p>
-//             </div>
-//             <div>
-//               <p className="text-4xl font-medium font-inter">
-//                 100
-//                 <span className="text-2xl font-medium">+</span>
-//               </p>
-//               <p className="font-poppins text-gray-700 mb-6">
-//                 Price comparison
-//               </p>
-//             </div>
-//             <div>
-//               <p className="text-4xl font-medium font-inter">
-//                 <span className="text-2xl font-medium">+</span>65%
-//               </p>
-//               <p className="font-poppins text-gray-700 mb-6">Client revenue.</p>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default AboutMe;
-
 import React from 'react';
 
 const HomeAboutSection = () => {
@@ -118,34 +59,6 @@ const HomeAboutSection = () => {
                   Learn More
                 </Link>
               </div>
-              {/* <div className="flex justify-between mt-10">
-                <div>
-                  <p className="text-4xl font-medium font-inter">
-                    80
-                    <span className="text-2xl font-medium">+</span>
-                  </p>
-                  <p className="font-poppins text-gray-700 mb-6">
-                    Successful projects.
-                  </p>
-                </div>
-                <div>
-                  <p className="text-4xl font-medium font-inter">
-                    100
-                    <span className="text-2xl font-medium">+</span>
-                  </p>
-                  <p className="font-poppins text-gray-700 mb-6">
-                    Price comparison
-                  </p>
-                </div>
-                <div>
-                  <p className="text-4xl font-medium font-inter">
-                    <span className="text-2xl font-medium">+</span>65%
-                  </p>
-                  <p className="font-poppins text-gray-700 mb-6">
-                    Client revenue.
-                  </p>
-                </div>
-              </div> */}
             </div>
           </div>
           {/* Image Section - Replace with your actual image */}
@@ -165,7 +78,7 @@ const HomeAboutSection = () => {
             <div className="relative w-64 h-64 md:w-80 md:h-96 rounded-full overflow-hidden border-4 border-white shadow-xl">
               <div className="absolute inset-0 bg-indigo-100 flex items-center justify-center h-full">
                 <Image
-                  src={'/images/gift_pic.png'}
+                  src={'/images/gift-pic.png'}
                   alt="about image"
                   width={200}
                   height={200}
