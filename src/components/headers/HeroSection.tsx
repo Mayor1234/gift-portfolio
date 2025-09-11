@@ -379,18 +379,18 @@ const HeroSection = () => {
 
           {/* Image Container */}
           <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl" />
+            <div className="absolute inset-0 bg-gradient-to-t to-transparent" />
             <Image
               src="/images/gift_pic.png"
               width={800}
               height={500}
               alt="Hero image"
               priority
-              className="object-cover rounded-2xl shadow-2xl transform group-hover:scale-105 transition-transform duration-500 ease-out"
+              className="object-cover transform group-hover:scale-105 transition-transform duration-500 ease-out"
             />
 
             {/* Overlay Glow */}
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-secondary/10 via-transparent to-pry/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute inset-0  bg-gradient-to-br from-secondary/10 via-transparent to-pry/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           </div>
 
           {/* Floating Elements around Image */}
