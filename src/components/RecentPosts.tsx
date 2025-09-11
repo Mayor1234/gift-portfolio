@@ -59,7 +59,6 @@ const RecentPosts = async () => {
                 <p className="pb-3 text-lg text-pry font-medium tracking-wide leading-snug transition-all duration-300 ease-linear group-hover:opacity-70">
                   {post?.title}
                 </p>
-
                 <div className="flex text-sm font-light text-gray-600 capitalize">
                   <p className="pr-2">
                     by{' '}

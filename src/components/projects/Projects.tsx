@@ -59,11 +59,11 @@ const ProjectSection = async () => {
                   />
                 </div>
                 <div className="text-lg text-pry font-medium leading-snug transition-all duration-300 ease-linear">
-                  <h3 className="text-lg text-gray-800 font-semibold mb-2">
+                  <h3 className="text-lg text-gray-800 font-semibold mb-2 mt-4">
                     {project.title}
                   </h3>
                   {project.categories && (
-                    <p className="text-gray-600 text-sm mb-4 flex flex-wrap  gap-2 w-full">
+                    <p className="text-gray-600 text-sm mb-4 flex flex-wrap gap-2 w-full">
                       {project.categories.map(
                         (category: { _id: string; title: string }, i) => (
                           <span

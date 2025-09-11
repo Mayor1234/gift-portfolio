@@ -326,9 +326,9 @@ const HeroSection = () => {
             <span className="bg-gradient-to-r from-[#fff] via-[#f6f7f8] to-[#f3f4f5] bg-clip-text text-transparent animate-pulse">
               I Help{' '}
               <span className="bg-gradient-to-r from-pry via-[#fff] to-pry bg-clip-text text-transparent">
-                Breathe {''}
+                Breathe{' '}
               </span>
-              Life
+              Life{' '}
             </span>
             <br className="hidden md:block" />
             <span>
@@ -336,7 +336,7 @@ const HeroSection = () => {
               <span className="bg-gradient-to-r from-pry via-[#fff] to-pry bg-clip-text text-transparent">
                 Spaces
               </span>
-              , By Elevating
+              , By Elevating{' '}
             </span>
             <br className="hidden md:block" />
             <span className="bg-gradient-to-r from-[#fff] via-[#fff] to-[#f6f7f8] bg-clip-text text-transparent">
