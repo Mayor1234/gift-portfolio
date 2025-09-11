@@ -1,4 +1,4 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 import Link from 'next/link';
 
 import React from 'react';
@@ -74,7 +74,7 @@ const HomeAboutSection = () => {
               />
             </div>
           </div> */}
-          <div className="md:col-span-1 flex justify-center h-full">
+          {/* <div className="md:col-span-1 flex justify-center h-full">
             <div className="relative w-64 h-64 md:w-80 md:h-96 rounded-full overflow-hidden border-4 border-white shadow-xl">
               <div className="absolute inset-0 bg-indigo-100 flex items-center justify-center h-full">
                 <Image
@@ -86,7 +86,7 @@ const HomeAboutSection = () => {
                 />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -387,15 +387,32 @@ const HeroSection = () => {
 
           {/* Image Container */}
           <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-t to-transparent" />
-            <Image
-              src="/images/gift_pic.png"
-              width={800}
-              height={500}
-              alt="Hero image"
-              priority
-              className="object-cover transform group-hover:scale-105 transition-transform duration-500 ease-out"
-            />
+            {/* <div className="md:col-span-1 flex justify-center h-full">
+            <div className="relative w-64 h-64 md:w-80 md:h-96 rounded-full overflow-hidden border-4 border-white shadow-xl">
+              <div className="absolute inset-0 bg-indigo-100 flex items-center justify-center h-full">
+                <Image
+                  src={'/images/gift-pic.png'}
+                  alt="about image"
+                  width={200}
+                  height={200}
+                  className="h-full w-full object-cover object-top"
+                />
+              </div>
+            </div>
+          </div> */}
+            <div className="md:col-span-1 flex justify-center h-full">
+              <div className="relative w-64 h-64 md:w-80 md:h-96 rounded-full overflow-hidden border-4 border-white shadow-xl">
+                <div className="absolute inset-0 bg-gradient-to-t to-transparent" />
+                <Image
+                  src="/images/gift_pic.png"
+                  width={800}
+                  height={500}
+                  alt="Hero image"
+                  priority
+                  className="object-cover transform group-hover:scale-105 transition-transform duration-500 ease-out"
+                />
+              </div>
+            </div>
 
             {/* Overlay Glow */}
             <div className="absolute inset-0  bg-gradient-to-br from-secondary/10 via-transparent to-pry/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
