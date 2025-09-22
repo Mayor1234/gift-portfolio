@@ -28,8 +28,7 @@ const page = async () => {
   return (
     <div className="max-w-6xl mx-auto px-5 md:px-0">
       <main className="max-w-7xl mx-auto px-6 py-12">
-        <h1 className="text-4xl font-bold text-gray-800 mb-10">Projects</h1>
-
+        <h2 className="text-4xl font-bold text-gray-800 mb-10">Projects</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, i) => (
             <Link
@@ -37,7 +36,7 @@ const page = async () => {
               href={`/projects/${project.slug.current}`}
               className="group block rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 ease-linear"
             >
-              <div className="h-64 overflow-hidden">
+              <div className="h-fit overflow-hidden">
                 <SanityImage
                   image={{ asset: project.gallery[0].asset }}
                   alt={project.gallery[0].alt}
@@ -47,11 +46,11 @@ const page = async () => {
                   priority
                 />
               </div>
-              <div className="bg-white dark:bg-gray-900 p-6">
-                <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+              <div className="p-6">
+                <h2 className="text-xl font-semibold text-gray-900 mb-2">
                   {project.title}
                 </h2>
-                <p className="text-gray-600 dark:text-gray-400 text-sm mb-3 line-clamp-2">
+                <p className="text-gray-600 dark:text-gray-400 text-sm line-clamp-2 mb-3">
                   {project.description}
                 </p>
                 {project.categories?.length > 0 && (

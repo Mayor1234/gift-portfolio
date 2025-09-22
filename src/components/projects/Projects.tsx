@@ -20,6 +20,8 @@ const ProjectSection = async () => {
 
   if (!projects) return <div>Project not found</div>;
 
+  console.log(projects);
+
   return (
     <div className="max-w-6xl mx-auto px-5 md:px-0 mg:py-10">
       <div>

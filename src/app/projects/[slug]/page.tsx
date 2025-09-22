@@ -1,5 +1,5 @@
 import { getProjectBySlug } from '@/app/services';
-import SanityImage from '@/components/SanityImage';
+import ProjectGallery from '@/components/ProjectGallery';
 import { client } from '@/sanity/lib/client';
 import BackButtion from '@/utils/BackButtion';
 import { type Metadata } from 'next';
@@ -87,7 +87,7 @@ const ProjectDetailPage = async ({
               {project.categories.map((category, index: number) => (
                 <span
                   key={index}
-                  className="inline-block bg-gray-200 text-sm text-gray-700 px-3 py-1 rounded-full"
+                  className="inline-block text-sm py-1 px-2 bg-pry text-light tracking-wide  rounded-full mr-2 font-inter font-medium shadow-md"
                 >
                   {category && category.title}
                 </span>
@@ -99,16 +99,10 @@ const ProjectDetailPage = async ({
           </p>
         </div>
 
-        <div className="rounded-2xl shadow-lg">
-          {project.gallery && (
-            <SanityImage
-              image={{ asset: project.gallery[0].asset }}
-              alt={project.gallery[0].alt}
-              width={1074}
-              height={500}
-              className="rounded-lg mb-8 aspect-video"
-              priority
-            />
+        {/* Image Gallery with Swiper */}
+        <div className="rounded-2xl shadow-lg mb-8">
+          {project.gallery && project.gallery.length > 0 && (
+            <ProjectGallery gallery={project.gallery} />
           )}
         </div>
       </main>

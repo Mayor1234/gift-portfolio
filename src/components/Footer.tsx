@@ -1,9 +1,4 @@
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaPinterest,
-  FaLinkedinIn,
-} from 'react-icons/fa';
+import { FaPinterest, FaLinkedinIn } from 'react-icons/fa';
 
 export default function FooterSection() {
   return (
@@ -52,22 +47,16 @@ export default function FooterSection() {
           <div>
             <h4 className="text-lg font-semibold mb-3">Contact</h4>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li>Email: hello@greyhales.com</li>
-              <li>Phone: +234 90032250674</li>
+              <li>Email: giftthompson65@gmail.com</li>
+              <li>Phone: +234 8148554538</li>
               <li>Location: Lagos, Nigeria</li>
             </ul>
           </div>
 
           {/* Socials */}
           <div>
-            <h4 className="text-lg font-semibold mb-3">Follow Us</h4>
+            <h4 className="text-lg font-semibold mb-3">Follow</h4>
             <div className="flex space-x-4 text-gray-300">
-              <a href="#" aria-label="Facebook" className="hover:text-white">
-                <FaFacebookF />
-              </a>
-              <a href="#" aria-label="Instagram" className="hover:text-white">
-                <FaInstagram />
-              </a>
               <a href="#" aria-label="Pinterest" className="hover:text-white">
                 <FaPinterest />
               </a>
