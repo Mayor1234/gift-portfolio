@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 const ContactPage = () => {
-  const whatsappNumber = '2348148554538';
+  const whatsappNumber = '2348148554538'; // Format: country code + number (no + or spaces)
   const whatsappMessage = encodeURIComponent(
     'Hi! I found your portfolio and would like to discuss a project.'
   );
@@ -45,7 +45,7 @@ const ContactPage = () => {
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
             Let&apos;s Work Together
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Ready to bring your vision to life? I&apos;m here to help you create
             something amazing.
           </p>
@@ -122,26 +122,26 @@ const ContactPage = () => {
               <h2 className="text-2xl font-bold mb-4">Why Work With Me?</h2>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-pry rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-gray-300">
                     5+ years of professional experience in design and
                     development
                   </p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-pry rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-gray-300">
                     Collaborative approach with clear communication throughout
                   </p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-pry rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-gray-300">
                     Dedicated to delivering high-quality results on time
                   </p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-pry rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-gray-300">
                     Available for both short-term projects and long-term
                     partnerships
