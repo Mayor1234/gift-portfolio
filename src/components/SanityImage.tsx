@@ -23,6 +23,7 @@ export default function SanityImage({
   width,
   height,
   className,
+  ...props
 }: SanityImageProps) {
   const imageUrl = urlFor(image)
     .width(width || 1200)
@@ -34,8 +35,11 @@ export default function SanityImage({
     <Image
       src={imageUrl || ''}
       alt={alt || ''}
-      width={width}
-      height={height}
+      // width={width}
+      // height={height}
+      {...(width ? { width } : {})}
+      {...(height ? { height } : {})}
+      {...props}
       className={className}
       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
       placeholder="blur"

@@ -74,12 +74,12 @@ const ProjectDetailPage = async ({
   const project: ProjectType = await getProjectBySlug(slug);
 
   return (
-    <div className="max-w-6xl mx-auto px-5 md:px-0">
-      <main className="max-w-5xl mx-auto px-6 py-12">
+    <div className="w-full lg:max-w-6xl mx-auto md:px-0">
+      <main className="max-w-full lg:max-w-5xl mx-auto px-5 py-12">
         {/* Back Button */}
         <BackButtion />
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-gray-800 mb-2">
+          <h1 className="text-2xl lg:text-4xl font-bold text-gray-800 mb-2">
             {project.title}
           </h1>
           {project.categories && (
@@ -94,7 +94,7 @@ const ProjectDetailPage = async ({
               ))}
             </div>
           )}
-          <p className="text-base text-gray-500 max-w-2xl font-poppins">
+          <p className="text-base text-gray-500 max-w-sm lg:max-w-2xl font-poppins">
             {project.description}
           </p>
         </div>

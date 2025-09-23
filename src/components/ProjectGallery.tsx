@@ -41,7 +41,7 @@ const ProjectGallery = ({ gallery }: ProjectGalleryProps) => {
     <>
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
-        spaceBetween={0}
+        spaceBetween={16}
         slidesPerView={1}
         navigation={true}
         pagination={{
@@ -64,14 +64,16 @@ const ProjectGallery = ({ gallery }: ProjectGalleryProps) => {
       >
         {gallery.map((image, index) => (
           <SwiperSlide key={index}>
-            <SanityImage
-              image={{ asset: image.asset }}
-              alt={image.alt || `Project image ${index + 1}`}
-              width={1074}
-              height={500}
-              className="w-full aspect-video object-cover"
-              priority={index === 0}
-            />
+            <div className="flex items-center justify-center w-full">
+              <SanityImage
+                image={{ asset: image.asset }}
+                alt={image.alt || `Project image ${index + 1}`}
+                width={1074}
+                height={500}
+                className="rounded-lg aspect-video object-cover w-full h-auto"
+                priority={index === 0}
+              />
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>

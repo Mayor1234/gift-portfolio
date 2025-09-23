@@ -22,7 +22,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative z-20 flex flex-col items-center justify-center bg-gradient-to-br from-sec via-sec to-secondary text-gray-100 min-h-[60vh] md:min-h-[75vh] px-6 md:px-0 overflow-hidden">
+    <section className="relative z-20 flex flex-col items-center justify-center bg-gradient-to-br from-sec via-sec to-secondary text-gray-100 min-h-[75vh] md:min-h-[75vh] py-10 px-6 md:px-0 overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Floating Orbs */}
